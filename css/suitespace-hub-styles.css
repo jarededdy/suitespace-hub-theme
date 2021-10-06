@@ -1,0 +1,579 @@
+/* IMPORTING FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&display=swap');
+
+/* ========
+GLOBAL STYLES 
+======== */
+
+#site-header {
+	display:none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+a {
+	font-family:'Nunito Sans', sans-serif;
+}
+.page {
+	margin:0px;
+}
+.vsg-white {
+	color:#fff;
+}
+.vsg-black {
+	color:#000;
+}
+.fifteenpx-top {
+	padding-top:15px;
+}
+.vsg-container a {
+	text-decoration:none;
+}
+.site-footer {
+	display:none;
+}
+a.hub-block-btn {
+	background: #00aeef;
+	padding: 15px 30px;
+	border:1px solid #00aeef;
+	border-radius: 28.5px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0;
+	line-height: 27px;
+	display:inline-block;
+	transition: .3s;
+	text-transform:uppercase;
+	text-decoration: none;
+}
+a.hub-block-btn:hover {
+	background: #ffffff;
+	color: #00aeef;
+}
+.button-wrapper {
+	display:block;
+	width:100%;
+	text-align:center;
+}
+
+/* ========
+HEADER STYLES
+======== */
+#header-content-wrapper {
+	max-width:1140px;
+	margin:0 auto;
+	display:grid;
+	grid-template-columns: 200px 9fr;
+	align-items:center;
+	padding:10px;
+}
+.menu {
+	display:grid;
+	grid-template-columns: repeat(auto-fit, 200px);
+	grid-template-rows:1fr;
+	justify-content:flex-end;
+}
+ul li.nav-item, .menu li.menu-item{
+	list-style:none;
+	text-align:center;
+}
+.menu li.menu-item a{
+	font-family: "Nunito Sans", Sans-serif;
+	font-weight: bold;
+	color:#000;
+	text-decoration: none;
+}
+.menu li.menu-item a:hover {
+	color:#00aeef;
+}
+.hide-mobile-nav {
+	display:none;
+}
+.view-mobile-nav {
+	display:block;
+}
+.mobile-menu-toggle {
+	display:none;
+	height:35px;
+	width:35px;
+	padding:5px;
+	border-radius:3px;
+	background-color:#00aeef;
+	color:#ffffff;
+	text-align:center;
+	margin-left:auto;
+}
+.mobile-nav ul.menu {
+	padding:0px 0px 10px 0px;
+	justify-content:flex-start;
+}
+.mobile-nav ul.menu li.menu-item {
+	display:block;
+}
+.mobile-nav ul.menu li.menu-item a{
+	padding:10px 20px;
+	display:block;
+}
+
+/* ========
+BANNER STYLES 
+======== */
+.vsg-hero-section {
+	background-image:url('/wp-content/uploads/2021/07/ss-header-bkg-laptop-scaled.jpg');
+	background-size:cover;
+	min-height:400px;
+	display:flex;
+	align-items:center;
+}
+.banner-grid-wrapper {
+	width:100%;
+}
+.banner-subheading {
+	color:#fff;
+	margin-left:10px;
+	margin-top:-10px;
+}
+.vsg-banner-text img {
+	max-width:500px;
+	width:100%;
+}
+.vsg-section {
+	padding:85px 0;
+}
+.vsg-container {
+	max-width:1140px;
+	margin:0 auto;
+}
+a.vsg-btn {
+	background: #fff200;
+	border-radius: 23.5px;
+	display: block;
+	max-width: 200px;
+	text-align: center;
+	padding: 15px 0px;
+	color: #262626;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+.in-col-spacer {
+	margin-top:35px;
+}
+
+/* =========
+MODULE SECTION STYLES
+======== */
+.module-section-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 354px);
+	justify-content:center;
+	max-width: 1140px;
+	margin: 50px auto;
+	grid-gap: 20px;
+	row-gap: 20px;
+}
+.module-title-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap:20px;
+	background:#262626;
+	padding:45px;
+	min-height:150px;
+	align-items:center;
+}
+.module-title-wrapper.inactive-module {
+	background: #cdcdcd;
+	border: 3px dashed #979797;
+	color: #414141;
+}
+.module-image-link {
+	text-decoration:none;
+}
+h3.hub-heading {
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0;
+	line-height: 27px;
+	margin-block-start: 0;
+	margin-bottom:0px;
+	text-transform: uppercase;
+}
+
+  /* ========
+  FEATURE STYLES
+  ======== */
+
+  .dam-features-list, .print-mail-features-list, .markauto-features-list, .crm-features-list, .web-dash-features-list {
+	  display:none;
+  }
+  .feature-accordion-title {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding:30px;
+    background: #EFEFEF;
+		font-size:20px;
+		font-family: 'Nunito Sans', sans-serif;
+  }
+	.module-button-wrapper {
+		display:grid;
+    grid-template-columns: 1fr;
+    padding:15px;
+    background: #EFEFEF;
+		font-size:20px;
+		font-family: 'Nunito Sans', sans-serif;
+	}
+	.module-btn {
+    text-align:right;
+    cursor:pointer;
+		text-transform:uppercase;
+  }
+  .feature-accordion-btn {
+    text-align:right;
+    cursor:pointer;
+  }
+  .feature-accordion-title i {
+    margin-right:15px;
+	background-color:#00AEEF;
+	padding:7px;
+	clip-path: circle(15px);
+	color:#fff;
+  }
+  .feature-accordion-content {
+	  padding:0 30px 30px 30px;
+	  background:#efefef;
+  }
+  .feature-list {
+    padding:15px 0 0 0;
+    background:#efefef;
+  }
+	.feature-list li:last-child {
+		margin-bottom:10px;
+	}
+  li.feature-list-item {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    padding: 10px 0 5px 0;
+  }
+  li.feature-list-item i {
+	  color:#00AEEF;
+		padding-top:5px;
+  }
+  .view-features {
+    display:inline-block;
+  }
+  .hide-features {
+    display:none;
+  }
+  .features-title-text {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .feature-accordion-content a.hub-block-btn {
+	  display:block;
+  }
+
+  /* ========
+  RSS FEED STYLES
+  ======== */
+
+  .rss-feed-wrapper {
+	  display:grid;
+	  grid-template-columns: 1fr 1fr 1fr 1fr;
+	  max-width:1140px;
+	  margin:50px auto;
+	  grid-gap:20px;
+  }
+
+  /* ========
+  MARKETING TECHNOLOGY UPSELL STYLES
+  ======== */
+  .martech-promo-section .vsg-inner-section {
+	  display:grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 30px;
+		padding:50px 0;
+	}
+	section.vsg-section.martech-promo-section {
+		background-image:url('/wp-content/uploads/2021/06/black-wavy-background-laptop-scaled.jpg');
+		min-height:400px;
+	}
+	.martech-promo-section a.hub-block-btn {
+		background: #fff200;
+		color: #262626;
+		font-size: 15px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		line-height: 20px;
+		margin-top: 20px;
+		border:1px solid #fff200;
+		display:inline-block;
+		padding:15px 30px;
+	}
+	.martech-promo-subheading {
+		font-family:'Nunito Sans';
+		font-size:30px;
+		color:#fff;
+	}
+	.martech-promo-section a.hub-block-btn:hover {
+		background:#00aeef;
+		border:1px solid #00aeef;
+		color:#fff200;
+	}
+	h3.vsg-heading, .blog-heading {
+		font-size: 40px;
+		font-weight:800;
+		letter-spacing: 0;
+		line-height: 55px;
+		text-transform:uppercase;
+	}
+	.marketing-technology-logo-grid-item {
+		text-align:center;
+	}
+	.marketing-technology-logo-grid-item img {
+		display:flex;
+		max-width:100%;
+		margin:0 auto;
+		align-items:center;
+	}
+
+  /* ========
+  ANNOUNCEMENT FEED SECTION
+  ======== */
+
+  .blog-feed-section {
+	  padding:50px 30px;
+	  background-color:#f9f9f9;
+  }
+  .blog-heading {
+	  padding:0px;
+	  margin:0 0 50px 0;
+  }
+  a.read-more-link, a.announcement-title {
+		color: #00aeef;
+		font-size: 23px;
+		font-weight: 500;
+		letter-spacing: 0;
+		line-height: 31px;
+	}
+	a.read-more-link {
+		color: #000;
+	}
+  a.read-more-link:hover {
+	  text-decoration:underline;
+  }
+  .vsg-section.blog-feed-section .vsg-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 25px;
+	}
+	section.vsg-section.blog-feed-heading-section {
+		padding: 85px 0 20px 0;
+	}
+	.vsg-section.blog-feed-section .vsg-container img {
+		width:100%;
+	}
+	.vsg-container.announcement-feed-wrapper {
+		margin-bottom:50px;
+	}
+	a.read-more-link {
+		text-decoration:underline;
+	}
+
+  /* ========
+  SUPPORT FORM SECTION
+  ======== */
+  .gform_wrapper.gravity-theme .gfield_label {
+	  font-family:'Nunito Sans', sans-serif;
+  }
+	input[type=date], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+		border:none;
+	}
+  input#gform_submit_button_1 {
+	  display:block;
+	  width:100%;
+	  max-width:500px;
+	  border-radius:50px;
+	  border:none;
+	  background:#00AEEF;
+	  color:#fff;
+	  font-family:'Nunito Sans', sans-serif;
+	  font-size:20px;
+	  font-weight:bold;
+	  margin:0 auto;
+  }
+  section.vsg-section.vsg-form-section {
+		background-image:url('/wp-content/uploads/2021/06/yellow-wavy-background-laptop-scaled.jpg');
+		background-size:cover;
+		padding:50px;
+	}
+#support-section-wrapper p {
+	font-size:2em;
+	font-weight:bold;
+}
+	input#gform_submit_button_1 {
+    padding: 15px;
+	}
+  /* FOOTER STYLES */
+  /* .vsg-section.footer-section {
+		background:#000;
+	}
+	.vsg-section.footer-section .vsg-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 25px;
+		align-items:center;
+	}
+	.vsg-section.footer-section .vsg-inner-section img {
+		width: 40px;
+		float:right;
+	}
+
+    .vsg-section.footer-section .vsg-inner-section {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.footer-copy a {
+		color: #fff;
+	}
+  @media (max-width:767px) {
+	h3.vsg-heading, .blog-heading {
+		font-size:32px;
+	}
+  } */
+
+/*Tablet CSS*/
+	@media (min-width:768px) and (max-width:1024px) {
+		.vsg-hero-section {
+ 			padding-left:40px;
+		}
+		.vsg-block-row {
+			grid-template-columns: 1fr 1fr;
+			padding:0 30px;
+		}
+		.vsg-block-row .vsg-hub-col {
+			padding-right: 20px;
+		}
+		.martech-promo-section h3.vsg-heading.vsg-white,
+		.vsg-body p.big-copy {
+			text-align: center;
+		}
+		.martech-promo-section .vsg-inner-section {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-row-gap: 50px;
+			padding: 50px 30px;
+		}
+		section.vsg-section.blog-feed-heading-section {
+			padding: 80px 30px 20px;
+		}
+		.vsg-section.blog-feed-section {
+			padding: 30px;
+		}
+		.module-section-wrapper {
+			padding:20px;
+			margin:0px;
+		}
+		.martech-promo-subheading {
+			text-align:center;
+		}
+		.vsg-container.announcement-feed-wrapper {
+			margin-bottom:30px;
+		}
+		.mobile-menu-toggle {
+			display:flex;
+			align-items:center;
+			justify-content: center;
+		}
+		#header-content-wrapper {
+			padding:20px;
+		}
+		.menu {
+			grid-template-columns:1fr;
+		}
+		.menu li.menu-item {
+			text-align:left;
+		}
+		.desktop-nav {
+			display:none;
+		}
+	}	
+
+	/* MOBILE CSS */
+	
+@media (max-width:767px) {
+	.vsg-hero-section {
+		padding: 30px;
+		min-height:250px;
+	}
+	h1.vsg-heading.banner-subheading {
+		font-size: 30px;
+		margin-left: 5px;
+	}
+	h3.vsg-heading, .blog-heading {
+		font-size:34px;
+	}
+	.martech-promo-section {
+		padding:30px;
+	}
+	.martech-promo-section .vsg-inner-section {
+		grid-template-columns:1fr 1fr;
+	}
+	.module-section-wrapper {
+		padding:30px;
+		margin:0px;
+		row-gap:30px;
+	}
+	.feature-accordion-title {
+		padding: 20px;
+		grid-template-columns: 1fr 2fr;
+	}
+	section.vsg-section.vsg-form-section {
+		padding:30px;
+	}
+	section.module-section-wrapper {
+		grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+	}
+	.vsg-container.announcement-feed-wrapper {
+		margin-bottom:30px;
+	}
+	.martech-promo-subheading {
+		font-size:20px;
+	}
+	.martech-promo-section a.hub-block-btn, a.hub-block-btn {
+		padding:15px;
+	}
+	.blog-feed-section {
+		padding: 20px 30px 30px 30px;
+	}
+	h3.vsg-heading, .blog-heading {
+		padding:0px;
+		margin-top:0px;
+	}
+	.mobile-menu-toggle {
+		display:flex;
+		align-items:center;
+		justify-content: center;
+	}
+	#header-content-wrapper {
+		padding:20px;
+	}
+	.menu {
+		grid-template-columns:1fr;
+	}
+	.menu li.menu-item {
+		text-align:left;
+	}
+	.desktop-nav {
+		display:none;
+	}
+	#support-section-wrapper p {
+		font-size: 1.2em;
+	}	
+}
