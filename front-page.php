@@ -41,12 +41,12 @@ if( have_rows('hub_modules', 'option') ):
         <div class="module-card-wrapper">
           <a href="<? echo $module_button_link ?>" class="module-image-link" target="_blank">
 					<?php if( get_sub_field('module_icon', 'option') ): // If there's an icon include an image and split the grid to include it, otherwise just load the title ?>  
-					<div class="module-title-wrapper" style="grid-template-columns:1fr 4fr;">
+					<div class="module-title-wrapper" style="grid-template-columns:1fr 4fr;background-color:<?php the_sub_field('module_background'); ?>;">
 						<div class="vsg-hub-inner-col">
 							<img src="<?php echo $module_icon ?>">
 						</div>
 					<?php else: ?>
-						<div class="module-title-wrapper" style="text-align:center;">
+						<div class="module-title-wrapper" style="text-align:center;color:<?php the_sub_field('title_color'); ?>;">
 					<?php endif; ?>
               <div class="vsg-hub-inner-col">
                 <h3 class="hub-heading vsg-white">

@@ -3,11 +3,12 @@
 // Include custom theme options page for Advanced Custom Fields
 if( function_exists('acf_add_options_page') ) {
 	
-	acf_add_options_page(array(
-		'page_title' 	=> 'Hub Settings',
-		'menu_title'	=> 'Hub Settings',
+    acf_add_options_page(array(
+		'page_title' 	=> 'Edit Your Hub',
+		'menu_title'	=> 'Edit Your Hub',
 		'menu_slug' 	=> 'hub-general-settings',
 		'capability'	=> 'edit_posts',
+        'position'      => '1.1',
 		'redirect'		=> false
 	));
 	
