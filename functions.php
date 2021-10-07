@@ -10,7 +10,7 @@ require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/jarededdy/suitespace-hub-theme/',
 	__FILE__,
-	'Suitespace Hub'
+	'suitespace-hub'
 );
 
 //Set the branch that contains the stable release.
