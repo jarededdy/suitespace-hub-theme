@@ -50,8 +50,8 @@ ANNOUNCEMENT SINGLE POST STYLES
 BANNER STYLES
 ==== */
 .vsg-hero-section {
-    <?php if( get_field('hero_banner') ): ?>
-    background-image:url(<?php the_field('hero_banner'); ?>);
+    <?php if( get_field('hero_banner', 'option') ): ?>
+    background-image:url(<?php the_field('hero_banner', 'option'); ?>);
     <?php endif; ?> 
 }
 
