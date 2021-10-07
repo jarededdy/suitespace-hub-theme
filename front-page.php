@@ -46,10 +46,10 @@ if( have_rows('hub_modules', 'option') ):
 							<img src="<?php echo $module_icon ?>">
 						</div>
 					<?php else: ?>
-						<div class="module-title-wrapper" style="text-align:center;color:<?php the_sub_field('title_color'); ?>;">
+						<div class="module-title-wrapper" style="text-align:center;">
 					<?php endif; ?>
               <div class="vsg-hub-inner-col">
-                <h3 class="hub-heading vsg-white">
+                <h3 class="hub-heading vsg-white" style="color:<?php the_sub_field('title_color'); ?>;">
                   <?php echo $module_title; ?>
                 </h3>
               </div> 
