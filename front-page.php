@@ -8,7 +8,7 @@ get_header();
 <section class="vsg-hero-section">
 	<div class="banner-grid-wrapper">
 		<div class="vsg-container vsg-banner-text">
-			<img src="/wp-content/uploads/2021/08/suitespace-io-logo-with-script.png">
+			<img src="/wp-content/images/suitespace-io-logo-with-script.png">
 			<?php if ( get_field('banner_message', 'option') ): ?>
 				<h1 class="vsg-heading banner-subheading"><?php the_field('banner_message', 'option') ?></h1>
 			<?php else: ?> 
