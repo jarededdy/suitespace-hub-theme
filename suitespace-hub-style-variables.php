@@ -77,7 +77,7 @@ a.read-more-link {
 SUPPORT FORM SECTION STYLES
 ==== */
 section.vsg-section.vsg-form-section {
-    background-image:url('/images/yellow-wavy-background-laptop-scaled.jpg');
+    background-image:url(<?php get_template_directory_uri() . '/images/yellow-wavy-background-laptop-scaled.jpg' ?>);
     /* If there's a support section background image override the default */
     <?php if( get_field('support_section_background') ): ?>
         background-image:url(<?php the_field('support_section_background'); ?>);

@@ -8,7 +8,7 @@ get_header();
 <section class="vsg-hero-section">
 	<div class="banner-grid-wrapper">
 		<div class="vsg-container vsg-banner-text">
-			<img src="images/suitespace-io-logo-with-script.png">
+			<img src="<?php get_template_directory_uri() . '/images/suitespace-io-logo-with-script.png' ?>">
 			<?php if ( get_field('banner_message', 'option') ): ?>
 				<h1 class="vsg-heading banner-subheading"><?php the_field('banner_message', 'option') ?></h1>
 			<?php else: ?> 
@@ -41,7 +41,7 @@ if( have_rows('hub_modules', 'option') ):
         <div class="module-card-wrapper">
           <a href="<? echo $module_button_link ?>" class="module-image-link" target="_blank">
 					<?php if( get_sub_field('module_icon', 'option') ): // If there's an icon include an image and split the grid to include it, otherwise just load the title ?>  
-					<div class="module-title-wrapper" style="grid-template-columns:1fr 4fr;background-color:<?php the_sub_field('module_background'); ?>;">
+					<div class="module-title-wrapper" style="grid-template-columns:1fr 4fr;background-color:<?php the_sub_field('module_background', 'options'); ?>;">
 						<div class="vsg-hub-inner-col">
 							<img src="<?php echo $module_icon ?>">
 						</div>
