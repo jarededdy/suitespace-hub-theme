@@ -12,6 +12,7 @@ $supportMessageColor = $supportContentOptions['support_message_text_color'];
 $supportSectionBackgroundOptions = get_field('support_background_options', 'options');
 $supportBackgroundImageURL = $supportSectionBackgroundOptions['support_section_background_img'];
 $supportBackgroundColor = $supportSectionBackgroundOptions['support_section_background_color'];
+$heroBannerOverlay = get_field('banner_background_overlay', 'options');
 ?>
 
 <style>
@@ -70,6 +71,11 @@ BANNER STYLES
         background-image:url(<?php echo get_template_directory_uri() . '/images/ss-header-bkg-laptop-scaled.jpg'; ?>);
     <?php endif; ?> 
 }
+	<?php if( $heroBannerOverlay ): ?>
+	.background-overlay {
+		background-color: <?php echo $heroBannerOverlay; ?>;
+	}
+	<?php endif; ?>
 
 /* ====
 MARKETING TECHNOLOGY UPSELL SECTION STYLES

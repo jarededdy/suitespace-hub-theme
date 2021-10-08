@@ -18,6 +18,12 @@ li,
 a {
 	font-family:'Nunito Sans', sans-serif;
 }
+.background-overlay {
+	height:100%;
+	width:100%;
+	position:absolute;
+	z-index:0;
+}
 .page {
 	margin:0px;
 }
@@ -131,14 +137,15 @@ BANNER STYLES
 	min-height:400px;
 	display:flex;
 	align-items:center;
+	position:relative;
 }
 .banner-grid-wrapper {
 	width:100%;
+	z-index:10;
 }
 .banner-subheading {
 	color:#fff;
 	margin-left:10px;
-	margin-top:-10px;
 }
 .vsg-banner-text img {
 	max-width:500px;

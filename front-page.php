@@ -22,11 +22,13 @@ $supportBackgroundColor = $supportSectionBackgroundOptions['support_section_back
 			<?php else: ?> 
 				<h1 class="vsg-heading banner-subheading">MARKETING HUB</h1>
 			<?php endif; ?>
+			
 		</div>
 		<!-- <div class="vsg-container in-col-spacer">
 			<a class="vsg-btn" href="#support-section-wrapper">GET SUPPORT</a>
 		</div> -->
 	</div>
+	<div class="background-overlay"></div>
 </section>
 
 <!-- START MODULE BLOCKS -->
