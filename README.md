@@ -1,11 +1,11 @@
-Suitespace Hub
+# Suitespace Hub
 
 Installation
 ---------------
 
 ### Requirements
 
-`_s` requires the following dependencies:
+Suitespace Hub requires the following dependencies:
 
 - [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/)
 
@@ -22,8 +22,8 @@ Download this repository and follow the steps below:
 6. Install the latest plugin and import the custom fields file stored in the root directory of the Suitespace Theme.
 7. Change your site title in the WordPress dashboard “Customize” tab to reflect the hub your building.
 8. Navigate to “Edit Your Hub” and set-up the following:
-- Brand and button colors
-- Modules
-- Hub logo
-- Background images
-- Hub language
+   - Brand and button colors
+   - Modules
+   - Hub logo
+   - Background images
+   - Hub language
