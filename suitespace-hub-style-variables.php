@@ -1,11 +1,17 @@
 <?php
 
-// Declaring brand colors for the CSS
+// Declaring grouped options as variables
 $brand_color = get_field('brand_colors', 'option');
 $primary_bc = $brand_color['primary'];
 $secondary_bc = $brand_color['secondary'];
 $button_bc = $brand_color['button_bg_color'];
 $button_text_color = $brand_color['button_text_color'];
+$supportContentOptions = get_field('support_content_options', 'options');
+$supportMessage = $supportContentOptions['support_message'];
+$supportMessageColor = $supportContentOptions['support_message_text_color'];
+$supportSectionBackgroundOptions = get_field('support_background_options', 'options');
+$supportBackgroundImageURL = $supportSectionBackgroundOptions['support_section_background_img'];
+$supportBackgroundColor = $supportSectionBackgroundOptions['support_section_background_color'];
 ?>
 
 <style>
@@ -38,6 +44,12 @@ MENU STYLES
     background-color:<?php echo $button_bc; ?>;
     color:<?php echo $button_text_color; ?>;
 }
+
+/* ====
+MODULE STYLES
+==== */
+
+
 
 /* ====
 ANNOUNCEMENT SINGLE POST STYLES
@@ -83,18 +95,19 @@ SUPPORT FORM SECTION STYLES
 section.vsg-section.vsg-form-section {
     
     /* Check if there's a set support section text color, if not set it to white */
-    <?php if( get_field('support_text_color', 'option') ): ?>
-        color: <?php thefield('support_text_color', 'option'); ?>;
+    <?php if( $supportMessageColor ): ?>
+        color: <?php echo $supportMessageColor; ?>;
     <?php else: ?>
         color:#fff;
     <?php endif; ?>
     
     /* Check if there's a set background image, if not check for fallback color, if niether set the background to black */
-    <?php if( get_field('support_section_background', 'option') ): ?>
-        background-image:url(<?php the_field('support_section_background', 'option'); ?>);
-    <?php elseif( get_field('support_section_background_fallback_color', 'option') ): ?>
-        background-color:<?php the_field('support_section_background_fallback_color', 'option')?>;
+    <?php if( $supportBackgroundImageURL ): ?>
+        background-image:url(<?php echo $supportBackgroundImageURL; ?>);
+    <?php elseif( $supportBackgroundColor ): ?>
+        background-color:<?php echo $supportBackgroundColor; ?>;
     <?php else: ?>
         background-image:url(<?php echo get_template_directory_uri() . '/images/yellow-wavy-background-laptop-scaled.jpg'; ?>);
     <?php endif; ?>
 }
+</style>

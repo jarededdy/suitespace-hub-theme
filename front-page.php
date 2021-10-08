@@ -1,5 +1,13 @@
 <?php 
 get_header();
+
+//Declare grouped theme options as variables for use in the template
+$supportContentOptions = get_field('support_content_options', 'options');
+$supportMessage = $supportContentOptions['support_message'];
+$supportMessageColor = $supportContentOptions['support_message_text_color'];
+$supportSectionBackgroundOptions = get_field('support_background_options', 'options');
+$supportBackgroundImageURL = $supportSectionBackgroundOptions['support_section_background_img'];
+$supportBackgroundColor = $supportSectionBackgroundOptions['support_section_background_color'];
 ?>
 
 <body class="vsg-body">
@@ -46,7 +54,7 @@ if( have_rows('hub_modules', 'option') ):
 							<img src="<?php echo $module_icon ?>">
 						</div>
 					<?php else: ?>
-						<div class="module-title-wrapper" style="text-align:center;">
+						<div class="module-title-wrapper" style="text-align:center;background-color:<?php the_sub_field('module_background', 'options'); ?>;">
 					<?php endif; ?>
               <div class="vsg-hub-inner-col">
                 <h3 class="hub-heading vsg-white" style="color:<?php the_sub_field('title_color'); ?>;">
@@ -131,7 +139,8 @@ if ( $announcement_loop->have_posts() ):?>
 		</div>
 </section>
 <?php endif; ?>
-<?php if( get_field('support_message', 'options') ): ?>
+<?php
+	if( $supportMessage  ): ?>
 	<section id="support-section-wrapper" class="vsg-section vsg-form-section">
 		<div class="vsg-container">
 			<h3 class="vsg-heading">
@@ -139,7 +148,7 @@ if ( $announcement_loop->have_posts() ):?>
 			</h3>
 			<div class="support-content-wrapper">
 				<p class="support-message">
-					<?php the_field('support_message', 'options'); ?>
+					<?php echo $supportMessage; ?>
 				</p>
 			</div>
 		</div>
