@@ -51,7 +51,11 @@ BANNER STYLES
 ==== */
 .vsg-hero-section {
     <?php if( get_field('hero_banner', 'option') ): ?>
-    background-image:url(<?php the_field('hero_banner', 'option'); ?>);
+        background-image:url(<?php the_field('hero_banner', 'option'); ?>);
+    <?php elseif( get_field('banner_bg_color', 'option') ): ?>
+        background-color:<?php the_field('banner_bg_color', 'option'); ?>;
+    <?php else: ?>
+        background-image:url(<?php echo get_template_directory_uri() . '/images/ss-header-bkg-laptop-scaled.jpg'; ?>);
     <?php endif; ?> 
 }
 
@@ -77,24 +81,20 @@ a.read-more-link {
 SUPPORT FORM SECTION STYLES
 ==== */
 section.vsg-section.vsg-form-section {
-    background-image:url(<?php echo get_template_directory_uri() . '/images/yellow-wavy-background-laptop-scaled.jpg' ?>);
-    /* If there's a support section background image override the default */
-    <?php if( get_field('support_section_background') ): ?>
-        background-image:url(<?php the_field('support_section_background'); ?>);
+    
+    /* Check if there's a set support section text color, if not set it to white */
+    <?php if( get_field('support_text_color', 'option') ): ?>
+        color: <?php thefield('support_text_color', 'option'); ?>;
+    <?php else: ?>
+        color:#fff;
     <?php endif; ?>
-    <?php if( get_field('support_section_background_fallback_color') ): ?>
-        background-color:<?php the_field('support_section_background_fallback_color')?>;
-    <?php endif; ?> 
+    
+    /* Check if there's a set background image, if not check for fallback color, if niether set the background to black */
+    <?php if( get_field('support_section_background', 'option') ): ?>
+        background-image:url(<?php the_field('support_section_background', 'option'); ?>);
+    <?php elseif( get_field('support_section_background_fallback_color', 'option') ): ?>
+        background-color:<?php the_field('support_section_background_fallback_color', 'option')?>;
+    <?php else: ?>
+        background-image:url(<?php echo get_template_directory_uri() . '/images/yellow-wavy-background-laptop-scaled.jpg'; ?>);
+    <?php endif; ?>
 }
-
-/* ====
-TABLET STYLES
-==== */
-@media (min-width:768px) and (max-width:1024px) {
-    .vsg-hero-section {
-        <?php if( get_field('hero_tablet_background') ):?>
-        background-image:url(<?php the_field('hero_tablet_background') ?>);
-        <? endif; ?>
-    }
-}
-</style>

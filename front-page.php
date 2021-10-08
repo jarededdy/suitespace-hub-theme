@@ -134,7 +134,7 @@ if ( $announcement_loop->have_posts() ):?>
 <?php if( get_field('support_message', 'options') ): ?>
 	<section id="support-section-wrapper" class="vsg-section vsg-form-section">
 		<div class="vsg-container">
-			<h3 class="vsg-heading vsg-black">
+			<h3 class="vsg-heading">
 				Need Help?
 			</h3>
 			<div class="support-content-wrapper">

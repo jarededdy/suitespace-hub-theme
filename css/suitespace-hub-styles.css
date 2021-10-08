@@ -127,7 +127,6 @@ ul li.nav-item, .menu li.menu-item{
 BANNER STYLES 
 ======== */
 .vsg-hero-section {
-	background-image:url('/wp-content/uploads/2021/07/ss-header-bkg-laptop-scaled.jpg');
 	background-size:cover;
 	min-height:400px;
 	display:flex;
@@ -281,7 +280,7 @@ h3.hub-heading {
   }
 
   /* ========
-  RSS FEED STYLES
+  RSS/BLOG FEED STYLES
   ======== */
 
   .rss-feed-wrapper {
@@ -292,56 +291,12 @@ h3.hub-heading {
 	  grid-gap:20px;
   }
 
-  /* ========
-  MARKETING TECHNOLOGY UPSELL STYLES
-  ======== */
-  .martech-promo-section .vsg-inner-section {
-	  display:grid;
-		grid-template-columns: repeat(6, 1fr);
-		gap: 30px;
-		padding:50px 0;
-	}
-	section.vsg-section.martech-promo-section {
-		background-image:url('/wp-content/uploads/2021/06/black-wavy-background-laptop-scaled.jpg');
-		min-height:400px;
-	}
-	.martech-promo-section a.hub-block-btn {
-		background: #fff200;
-		color: #262626;
-		font-size: 15px;
-		font-weight: bold;
-		letter-spacing: 1px;
-		line-height: 20px;
-		margin-top: 20px;
-		border:1px solid #fff200;
-		display:inline-block;
-		padding:15px 30px;
-	}
-	.martech-promo-subheading {
-		font-family:'Nunito Sans';
-		font-size:30px;
-		color:#fff;
-	}
-	.martech-promo-section a.hub-block-btn:hover {
-		background:#00aeef;
-		border:1px solid #00aeef;
-		color:#fff200;
-	}
 	h3.vsg-heading, .blog-heading {
 		font-size: 40px;
 		font-weight:800;
 		letter-spacing: 0;
 		line-height: 55px;
 		text-transform:uppercase;
-	}
-	.marketing-technology-logo-grid-item {
-		text-align:center;
-	}
-	.marketing-technology-logo-grid-item img {
-		display:flex;
-		max-width:100%;
-		margin:0 auto;
-		align-items:center;
 	}
 
   /* ========
@@ -410,7 +365,6 @@ h3.hub-heading {
 	  margin:0 auto;
   }
   section.vsg-section.vsg-form-section {
-		background-image:url('../images/yellow-wavy-background-laptop-scaled.jpg');
 		background-size:cover;
 		padding:50px;
 	}
@@ -421,32 +375,7 @@ h3.hub-heading {
 	input#gform_submit_button_1 {
     padding: 15px;
 	}
-  /* FOOTER STYLES */
-  /* .vsg-section.footer-section {
-		background:#000;
-	}
-	.vsg-section.footer-section .vsg-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		gap: 25px;
-		align-items:center;
-	}
-	.vsg-section.footer-section .vsg-inner-section img {
-		width: 40px;
-		float:right;
-	}
 
-    .vsg-section.footer-section .vsg-inner-section {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-	.footer-copy a {
-		color: #fff;
-	}
-  @media (max-width:767px) {
-	h3.vsg-heading, .blog-heading {
-		font-size:32px;
-	}
-  } */
 
 /*Tablet CSS*/
 	@media (min-width:768px) and (max-width:1024px) {
@@ -505,7 +434,7 @@ h3.hub-heading {
 		}
 	}	
 
-	/* MOBILE CSS */
+/* MOBILE CSS */
 	
 @media (max-width:767px) {
 	.vsg-hero-section {
