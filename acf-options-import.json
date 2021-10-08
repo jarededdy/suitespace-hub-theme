@@ -246,6 +246,25 @@
                 ]
             },
             {
+                "key": "field_614cc66e2a8d1",
+                "label": "Banner Message",
+                "name": "banner_message",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_614cc632ecb40",
                 "label": "Hero Banner Background Image",
                 "name": "hero_banner",
@@ -270,23 +289,28 @@
                 "mime_types": ""
             },
             {
-                "key": "field_614cc66e2a8d1",
-                "label": "Banner Message",
-                "name": "banner_message",
-                "type": "text",
+                "key": "field_6160d77f8b6e9",
+                "label": "Banner Background Overlay",
+                "name": "banner_background_overlay",
+                "type": "color_picker",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_615f408f96d48",
+                            "operator": "!=empty"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "default_value": "rgba(0,0,0,.5)",
+                "enable_opacity": 1,
+                "return_format": "string"
             },
             {
                 "key": "field_6160c54034c63",
