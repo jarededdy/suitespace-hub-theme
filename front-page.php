@@ -8,7 +8,7 @@ get_header();
 <section class="vsg-hero-section">
 	<div class="banner-grid-wrapper">
 		<div class="vsg-container vsg-banner-text">
-			<img src="/images/suitespace-io-logo-with-script.png">
+			<img src="images/suitespace-io-logo-with-script.png">
 			<?php if ( get_field('banner_message', 'option') ): ?>
 				<h1 class="vsg-heading banner-subheading"><?php the_field('banner_message', 'option') ?></h1>
 			<?php else: ?> 
@@ -131,7 +131,7 @@ if ( $announcement_loop->have_posts() ):?>
 		</div>
 </section>
 <?php endif; ?>
-<?php if( get_field('support_message') ): ?>
+<?php if( get_field('support_message', 'options') ): ?>
 	<section id="support-section-wrapper" class="vsg-section vsg-form-section">
 		<div class="vsg-container">
 			<h3 class="vsg-heading vsg-black">
@@ -139,7 +139,7 @@ if ( $announcement_loop->have_posts() ):?>
 			</h3>
 			<div class="support-content-wrapper">
 				<p class="support-message">
-					<?php the_field('support_message'); ?>
+					<?php the_field('support_message', 'options'); ?>
 				</p>
 			</div>
 		</div>
