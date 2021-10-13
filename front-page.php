@@ -16,11 +16,17 @@ $supportBackgroundColor = $supportSectionBackgroundOptions['support_section_back
 <section class="vsg-hero-section">
 	<div class="banner-grid-wrapper">
 		<div class="vsg-container vsg-banner-text">
-			<img src="<?php echo get_template_directory_uri() . '/images/suitespace-io-logo-with-script.png' ?>">
-			<?php if ( get_field('banner_message', 'option') ): ?>
-				<h1 class="vsg-heading banner-subheading"><?php the_field('banner_message', 'option') ?></h1>
+			<?php if ( get_field('banner_heading', 'option') ): ?>
+				
+				<h1 class="banner-title"><?php the_field('banner_heading', 'option'); ?></h1>
+
+			<?php else: ?>
+				<img src="<?php echo get_template_directory_uri() . '/images/suitespace-io-logo-with-script.png' ?>">
+			<?php endif; ?>
+				<?php if ( get_field('banner_message', 'option') ): ?>
+				<p class="vsg-heading banner-subheading"><?php the_field('banner_message', 'option') ?></p>
 			<?php else: ?> 
-				<h1 class="vsg-heading banner-subheading">MARKETING HUB</h1>
+				<p class="vsg-heading banner-subheading">MARKETING HUB</p>
 			<?php endif; ?>
 			
 		</div>

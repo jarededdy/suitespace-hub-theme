@@ -139,13 +139,17 @@ BANNER STYLES
 	align-items:center;
 	position:relative;
 }
+.vsg-heading.banner-subheading {
+	font-size:1.5em;
+	color:#fff;
+}
+.banner-title {
+	color:#fff;
+	font-size:2em;
+}
 .banner-grid-wrapper {
 	width:100%;
 	z-index:10;
-}
-.banner-subheading {
-	color:#fff;
-	margin-left:10px;
 }
 .vsg-banner-text img {
 	max-width:500px;
@@ -386,8 +390,8 @@ h3.hub-heading {
 
 /*Tablet CSS*/
 	@media (min-width:768px) and (max-width:1024px) {
-		.vsg-hero-section {
- 			padding-left:40px;
+		.vsg-banner-text {
+			margin:40px;
 		}
 		.vsg-block-row {
 			grid-template-columns: 1fr 1fr;
@@ -445,8 +449,10 @@ h3.hub-heading {
 	
 @media (max-width:767px) {
 	.vsg-hero-section {
-		padding: 30px;
 		min-height:250px;
+	}
+	.vsg-banner-text {
+		margin:30px;
 	}
 	h1.vsg-heading.banner-subheading {
 		font-size: 30px;
