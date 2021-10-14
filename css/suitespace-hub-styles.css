@@ -18,7 +18,7 @@ li,
 a {
 	font-family:'Nunito Sans', sans-serif;
 }
-.background-overlay {
+.background-overlay, .module-background-overlay {
 	height:100%;
 	width:100%;
 	position:absolute;
@@ -178,6 +178,9 @@ a.vsg-btn {
 .in-col-spacer {
 	margin-top:35px;
 }
+.module-section-wrapper .module-title-wrapper {
+	background-size: cover;
+}
 
 /* =========
 MODULE SECTION STYLES
@@ -199,11 +202,15 @@ MODULE SECTION STYLES
 	padding:45px;
 	min-height:150px;
 	align-items:center;
+	position:relative;
 }
 .module-title-wrapper.inactive-module {
 	background: #cdcdcd;
 	border: 3px dashed #979797;
 	color: #414141;
+}
+.module-icon, .module-title {
+	z-index:10;
 }
 .module-image-link {
 	text-decoration:none;
@@ -309,7 +316,10 @@ h3.hub-heading {
 		line-height: 55px;
 		text-transform:uppercase;
 	}
-
+	.blog-feed-section h3.blog-heading {
+	max-width:1140px;
+	margin:0 auto 30px auto;
+}
   /* ========
   ANNOUNCEMENT FEED SECTION
   ======== */
