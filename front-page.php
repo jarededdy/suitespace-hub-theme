@@ -48,14 +48,14 @@ if( have_rows('hub_modules', 'option') ):
 
 				// Declaring Module Variables and assigning the values given in the page edit screen in the custom fields
         $module_title = get_sub_field('module_title', 'option');
-		$module_title_color = get_sub_field('module_title_color', 'option');
+				$module_title_color = get_sub_field('module_title_color', 'option');
         $module_icon = get_sub_field('module_icon', 'option');
         $module_button_text = get_sub_field('module_button_text', 'option');
         $module_button_link = get_sub_field('module_button_link', 'option');
-		$module_background_color = get_sub_field('module_background_color', 'option');
-		$use_background_img = get_sub_field('use_background_image', 'option');
-		$module_background_img = get_sub_field('module_background_image', 'option');
-		$module_background_overlay = get_sub_field('module_background_overlay', 'option');
+				$module_background_color = get_sub_field('module_background_color', 'option');
+				$use_background_img = get_sub_field('use_background_image', 'option');
+				$module_background_img = get_sub_field('module_background_image', 'option');
+				$module_background_overlay = get_sub_field('module_background_overlay', 'option');
         ?>
         
         <div class="module-card-wrapper">
@@ -158,7 +158,7 @@ if ( $announcement_loop->have_posts() ):?>
 	</div> <!-- END ANNOUNCEMENTS LOOP -->
 	<div class="button-wrapper">
 			<a href="/announcements" class="hub-block-btn">View All Announcements</a>
-		</div>
+	</div>
 </section>
 <?php endif; ?>
 <?php
