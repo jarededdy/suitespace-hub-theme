@@ -221,11 +221,6 @@ function addClientRoles() {
 };
 add_action('init', 'addClientRoles');
 
-
-// 	filter the users_list_table_query_args to not include users with the role administrator
-// 	return list of users
-// 	end if
-// 	
 //* Hide this administrator account from the users list
 add_action('pre_user_query','site_pre_user_query');
 function site_pre_user_query($user_search) {
