@@ -1,24 +1,39 @@
 <?php 
 get_header();
+
+//Declare grouped theme options as variables for use in the template
+$supportContentOptions = get_field('support_content_options', 'options');
+$supportMessage = $supportContentOptions['support_message'];
+$supportMessageColor = $supportContentOptions['support_message_text_color'];
+$supportSectionBackgroundOptions = get_field('support_background_options', 'options');
+$supportBackgroundImageURL = $supportSectionBackgroundOptions['support_section_background_img'];
+$supportBackgroundColor = $supportSectionBackgroundOptions['support_section_background_color'];
 ?>
 
 <body class="vsg-body">
-
 <!-- NEED TO COME BACK TO AND FIX SPACING/LAYOUT OF THIS SECTION -->
 <section class="vsg-hero-section">
 	<div class="banner-grid-wrapper">
 		<div class="vsg-container vsg-banner-text">
-			<img src="<?php get_template_directory_uri() . '/images/suitespace-io-logo-with-script.png' ?>">
-			<?php if ( get_field('banner_message', 'option') ): ?>
-				<h1 class="vsg-heading banner-subheading"><?php the_field('banner_message', 'option') ?></h1>
-			<?php else: ?> 
-				<h1 class="vsg-heading banner-subheading">MARKETING HUB</h1>
+			<?php if ( get_field('banner_heading', 'option') ): ?>
+				
+				<h1 class="banner-title"><?php the_field('banner_heading', 'option'); ?></h1>
+
+			<?php else: ?>
+				<img src="<?php echo get_template_directory_uri() . '/images/suitespace-io-logo-with-script.png' ?>">
 			<?php endif; ?>
+				<?php if ( get_field('banner_message', 'option') ): ?>
+				<p class="vsg-heading banner-subheading"><?php the_field('banner_message', 'option') ?></p>
+			<?php else: ?> 
+				<p class="vsg-heading banner-subheading">MARKETING HUB</p>
+			<?php endif; ?>
+			
 		</div>
 		<!-- <div class="vsg-container in-col-spacer">
 			<a class="vsg-btn" href="#support-section-wrapper">GET SUPPORT</a>
 		</div> -->
 	</div>
+	<div class="background-overlay"></div>
 </section>
 
 <!-- START MODULE BLOCKS -->
@@ -33,27 +48,39 @@ if( have_rows('hub_modules', 'option') ):
 
 				// Declaring Module Variables and assigning the values given in the page edit screen in the custom fields
         $module_title = get_sub_field('module_title', 'option');
+		$module_title_color = get_sub_field('module_title_color', 'option');
         $module_icon = get_sub_field('module_icon', 'option');
         $module_button_text = get_sub_field('module_button_text', 'option');
         $module_button_link = get_sub_field('module_button_link', 'option');
+		$module_background_color = get_sub_field('module_background_color', 'option');
+		$use_background_img = get_sub_field('use_background_image', 'option');
+		$module_background_img = get_sub_field('module_background_image', 'option');
+		$module_background_overlay = get_sub_field('module_background_overlay', 'option');
         ?>
         
         <div class="module-card-wrapper">
-          <a href="<? echo $module_button_link ?>" class="module-image-link" target="_blank">
-					<?php if( get_sub_field('module_icon', 'option') ): // If there's an icon include an image and split the grid to include it, otherwise just load the title ?>  
-					<div class="module-title-wrapper" style="grid-template-columns:1fr 4fr;background-color:<?php the_sub_field('module_background', 'options'); ?>;">
-						<div class="vsg-hub-inner-col">
-							<img src="<?php echo $module_icon ?>">
+          <a href="<? echo $module_button_link; ?>" class="module-image-link" target="_blank">
+					<?php if( $module_icon ): // If there's an icon included load the image and split the grid to include it, otherwise just load the title ?>  
+					<div class="module-title-wrapper" style="grid-template-columns:1fr 4fr;<?php 
+						if($use_background_img == 'true' ): ?>
+						background-image:url(<?php echo $module_background_img; ?>)
+						<?php else: ?>
+						background-color:<?php echo $module_background_color; 
+						endif; ?>;">
+						<div class="vsg-hub-inner-col module-icon">
+							<img src="<?php echo $module_icon; ?>">
 						</div>
 					<?php else: ?>
-						<div class="module-title-wrapper" style="text-align:center;">
+						<div class="module-title-wrapper" style="text-align:center;background-color:<?php echo $module_background_color; ?>;">
 					<?php endif; ?>
-              <div class="vsg-hub-inner-col">
-                <h3 class="hub-heading vsg-white" style="color:<?php the_sub_field('title_color'); ?>;">
+              <div class="vsg-hub-inner-col module-title">
+                <h3 class="hub-heading vsg-white" style="color:<?php echo $module_title_color; ?>;">
                   <?php echo $module_title; ?>
                 </h3>
               </div> 
+							<div class="module-background-overlay" style="background-color:<?php echo $module_background_overlay; ?>;"></div>
             </div>
+			
           </a>
           <div class="module-features-wrapper">
             <div class="module-button-wrapper dam-features-title">
@@ -84,11 +111,14 @@ $announcement_loop = new WP_Query(
 if ( $announcement_loop->have_posts() ):?>
 <section class="vsg-section blog-feed-section">
 
-	<div class="vsg-container">
-		<h3 class="blog-heading vsg-black">
-			Announcements
-		</h3>
-	</div>
+	<h3 class="blog-heading vsg-black">
+		<?php if(get_field('post_feed_title', 'option')): 
+		the_field('post_feed_title', 'option');
+		else: ?>
+		Announcements
+		<?php endif; ?>
+	</h3>
+
 
 	
 	<div class="vsg-container announcement-feed-wrapper"> <!-- BEGIN ANNOUNCEMENTS LOOP -->
@@ -131,15 +161,16 @@ if ( $announcement_loop->have_posts() ):?>
 		</div>
 </section>
 <?php endif; ?>
-<?php if( get_field('support_message', 'options') ): ?>
+<?php
+	if( $supportMessage  ): ?>
 	<section id="support-section-wrapper" class="vsg-section vsg-form-section">
 		<div class="vsg-container">
-			<h3 class="vsg-heading vsg-black">
+			<h3 class="vsg-heading">
 				Need Help?
 			</h3>
 			<div class="support-content-wrapper">
 				<p class="support-message">
-					<?php the_field('support_message', 'options'); ?>
+					<?php echo $supportMessage; ?>
 				</p>
 			</div>
 		</div>

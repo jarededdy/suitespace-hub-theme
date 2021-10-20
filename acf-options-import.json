@@ -4,91 +4,6 @@
         "title": "Suitespace Hub Elements",
         "fields": [
             {
-                "key": "field_614e5d741f5ba",
-                "label": "Brand Colors",
-                "name": "brand_colors",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "table",
-                "sub_fields": [
-                    {
-                        "key": "field_614e5d9a1f5bb",
-                        "label": "Primary Brand Color",
-                        "name": "primary",
-                        "type": "color_picker",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "enable_opacity": 0,
-                        "return_format": "string"
-                    },
-                    {
-                        "key": "field_614e5dac1f5bc",
-                        "label": "Secondary Brand Color",
-                        "name": "secondary",
-                        "type": "color_picker",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "enable_opacity": 0,
-                        "return_format": "string"
-                    },
-                    {
-                        "key": "field_614e5dba1f5bd",
-                        "label": "Button Background Color",
-                        "name": "button_bg_color",
-                        "type": "color_picker",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "enable_opacity": 0,
-                        "return_format": "string"
-                    },
-                    {
-                        "key": "field_614e5dcd1f5be",
-                        "label": "Button Text Color",
-                        "name": "button_text_color",
-                        "type": "color_picker",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "enable_opacity": 0,
-                        "return_format": "string"
-                    }
-                ]
-            },
-            {
                 "key": "field_614cd0272a8d2",
                 "label": "Hub Modules",
                 "name": "hub_modules",
@@ -223,7 +138,7 @@
             },
             {
                 "key": "field_614a5fb8ae432",
-                "label": "Header Logo",
+                "label": "Hub Logo",
                 "name": "header_logo",
                 "type": "image",
                 "instructions": "",
@@ -246,8 +161,112 @@
                 "mime_types": ""
             },
             {
+                "key": "field_614e5d741f5ba",
+                "label": "Brand Colors",
+                "name": "brand_colors",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "sub_fields": [
+                    {
+                        "key": "field_614e5d9a1f5bb",
+                        "label": "Primary Brand Color",
+                        "name": "primary",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "enable_opacity": 0,
+                        "return_format": "string"
+                    },
+                    {
+                        "key": "field_614e5dac1f5bc",
+                        "label": "Secondary Brand Color",
+                        "name": "secondary",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "enable_opacity": 0,
+                        "return_format": "string"
+                    },
+                    {
+                        "key": "field_614e5dba1f5bd",
+                        "label": "Button Background Color",
+                        "name": "button_bg_color",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "enable_opacity": 0,
+                        "return_format": "string"
+                    },
+                    {
+                        "key": "field_614e5dcd1f5be",
+                        "label": "Button Text Color",
+                        "name": "button_text_color",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "enable_opacity": 0,
+                        "return_format": "string"
+                    }
+                ]
+            },
+            {
+                "key": "field_614cc66e2a8d1",
+                "label": "Banner Message",
+                "name": "banner_message",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_614cc632ecb40",
-                "label": "Hero Banner",
+                "label": "Hero Banner Background Image",
                 "name": "hero_banner",
                 "type": "image",
                 "instructions": "",
@@ -270,73 +289,35 @@
                 "mime_types": ""
             },
             {
-                "key": "field_614cc66e2a8d1",
-                "label": "Banner Message",
-                "name": "banner_message",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_6156582dc45f4",
-                "label": "Support Message",
-                "name": "support_message",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_614cd3c21cb6b",
-                "label": "Support Section Background",
-                "name": "support_section_background",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "medium",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_614cd3e51cb6c",
-                "label": "Support Section Background Fallback Color",
-                "name": "support_section_background_fallback_color",
+                "key": "field_6160d77f8b6e9",
+                "label": "Banner Background Overlay",
+                "name": "banner_background_overlay",
                 "type": "color_picker",
-                "instructions": "Choose a brand color for for this section to use if the image doesn't load.",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_615f408f96d48",
+                            "operator": "!=empty"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "rgba(0,0,0,.5)",
+                "enable_opacity": 1,
+                "return_format": "string"
+            },
+            {
+                "key": "field_6160c54034c63",
+                "label": "Support Content",
+                "name": "support_content_options",
+                "type": "group",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -344,9 +325,103 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "#000",
-                "enable_opacity": 0,
-                "return_format": "string"
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_6160c55034c64",
+                        "label": "Support Message",
+                        "name": "support_message",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_6160c56f34c65",
+                        "label": "Support Message Text Color",
+                        "name": "support_message_text_color",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "#FFFFFF",
+                        "enable_opacity": 0,
+                        "return_format": "string"
+                    }
+                ]
+            },
+            {
+                "key": "field_6160c44d34c5f",
+                "label": "Support Background",
+                "name": "support_background_options",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "sub_fields": [
+                    {
+                        "key": "field_6160c46534c60",
+                        "label": "Support Section Background Image",
+                        "name": "support_section_background_img",
+                        "type": "image",
+                        "instructions": "Upload or choose an image as a background for your support section.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_6160c4a234c61",
+                        "label": "Support Section Background Color",
+                        "name": "support_section_background_color",
+                        "type": "color_picker",
+                        "instructions": "If you don't want to use an image background for your support section, instead choose a background color.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "enable_opacity": 0,
+                        "return_format": "string"
+                    }
+                ]
             }
         ],
         "location": [
