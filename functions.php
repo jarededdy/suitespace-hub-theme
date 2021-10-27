@@ -214,6 +214,7 @@ function addClientRoles() {
 				'manage_links' => true,
 				'create_users' => true,
 				'edit_users' => true,
+				'delete_users' => true,
 				'edit_theme_options' => true,
 				'list_users' => true
 			) 
