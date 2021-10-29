@@ -48,42 +48,44 @@ if( have_rows('hub_modules', 'option') ):
 
 				// Declaring Module Variables and assigning the values given in the page edit screen in the custom fields
         $module_title = get_sub_field('module_title', 'option');
-				$module_title_color = get_sub_field('module_title_color', 'option');
+		$module_title_color = get_sub_field('module_title_color', 'option');
         $module_icon = get_sub_field('module_icon', 'option');
         $module_button_text = get_sub_field('module_button_text', 'option');
         $module_button_link = get_sub_field('module_button_link', 'option');
-				$module_background_color = get_sub_field('module_background_color', 'option');
-				$use_background_img = get_sub_field('use_background_image', 'option');
-				$module_background_img = get_sub_field('module_background_image', 'option');
-				$module_background_overlay = get_sub_field('module_background_overlay', 'option');
+		$module_background_color = get_sub_field('module_background_color', 'option');
+		$use_background_img = get_sub_field('use_background_image', 'option');
+		$module_background_img = get_sub_field('module_background_image', 'option');
+		$module_background_overlay = get_sub_field('module_background_overlay', 'option');
         ?>
         
         <div class="module-card-wrapper">
           <a href="<? echo $module_button_link; ?>" class="module-image-link" target="_blank">
 					<?php if( $module_icon ): // If there's an icon included load the image and split the grid to include it, otherwise just load the title ?>  
 					<div class="module-title-wrapper" style="grid-template-columns:1fr 4fr;<?php 
-						if($use_background_img == 'true' ): ?>
+						if($use_background_img === 'true' ): ?>
 						background-image:url(<?php echo $module_background_img; ?>)
 						<?php else: ?>
-						background-color:<?php echo $module_background_color; 
+						background-color:<?php echo $module_background_color;
 						endif; ?>;">
 						<div class="vsg-hub-inner-col module-icon">
 							<img src="<?php echo $module_icon; ?>">
 						</div>
 					<?php else: ?>
 						<div class="module-title-wrapper" style="text-align:center;<?php 
-						if($use_background_img == 'true' ): ?>
+						if($use_background_img === 'true' ): ?>
 						background-image:url(<?php echo $module_background_img; ?>)
 						<?php else: ?>
 						background-color:<?php echo $module_background_color; 
-						endif; ?>;">
+						endif;?>;">
 					<?php endif; ?>
               <div class="vsg-hub-inner-col module-title">
                 <h3 class="hub-heading vsg-white" style="color:<?php echo $module_title_color; ?>;">
                   <?php echo $module_title; ?>
                 </h3>
               </div> 
-							<div class="module-background-overlay" style="background-color:<?php echo $module_background_overlay; ?>;"></div>
+			<?php if( $use_background_img === 'true'): ?>
+				<div class="module-background-overlay" style="background-color:<?php echo $module_background_overlay; ?>;"></div>
+			<?php endif; ?>
             </div>
 			
           </a>
@@ -163,7 +165,7 @@ if ( $announcement_loop->have_posts() ):?>
 	</div> <!-- END ANNOUNCEMENTS LOOP -->
 	<div class="button-wrapper">
 			<a href="/announcements" class="hub-block-btn">View All Announcements</a>
-	</div>
+		</div>
 </section>
 <?php endif; ?>
 <?php
