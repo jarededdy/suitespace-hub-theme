@@ -120,4 +120,21 @@ function hide_menu_items_from_users() {
     }
 };
 add_action('admin_menu', 'hide_menu_items_from_users' );
-?>
+
+/**
+ * WordPress function for redirecting users on login based on user role
+ */
+function redirect_hub_admins( $url, $request, $user ) {
+	if ( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+			if ( $user->has_cap( 'administrator' ) ) {
+					$url = admin_url();
+			} else {
+					$url = home_url( '/wp-admin/admin.php?page=hub-general-settings' );
+			}
+	}
+	return $url;
+}
+
+add_filter( 'login_redirect', 'redirect_hub_admins', 10, 3 );
+
+
