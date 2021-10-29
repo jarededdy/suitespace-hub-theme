@@ -71,7 +71,12 @@ if( have_rows('hub_modules', 'option') ):
 							<img src="<?php echo $module_icon; ?>">
 						</div>
 					<?php else: ?>
-						<div class="module-title-wrapper" style="text-align:center;background-color:<?php echo $module_background_color; ?>;">
+						<div class="module-title-wrapper" style="text-align:center;<?php 
+						if($use_background_img == 'true' ): ?>
+						background-image:url(<?php echo $module_background_img; ?>)
+						<?php else: ?>
+						background-color:<?php echo $module_background_color; 
+						endif; ?>;">
 					<?php endif; ?>
               <div class="vsg-hub-inner-col module-title">
                 <h3 class="hub-heading vsg-white" style="color:<?php echo $module_title_color; ?>;">

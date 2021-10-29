@@ -109,4 +109,15 @@ function default_hub_announcement_taxonomy_term( $post_id, $post ) {
 }
 add_action( 'save_post', 'default_hub_announcement_taxonomy_term', 100, 2 );
 
+function hide_menu_items_from_users() {
+    $user = wp_get_current_user();
+    if ( in_array( 'hub_admin', (array) $user->roles ) ) {
+    //The user has the "Hub Administrator" role
+    	remove_menu_page('index.php'); 
+    	remove_menu_page('edit-comments.php'); 
+        remove_menu_page('themes.php'); // Appearance
+        remove_menu_page('tools.php'); // Tools
+    }
+};
+add_action('admin_menu', 'hide_menu_items_from_users' );
 ?>
