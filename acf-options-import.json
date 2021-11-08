@@ -19,8 +19,8 @@
                 "collapsed": "field_614cd2f42a8d4",
                 "min": 0,
                 "max": 0,
-                "layout": "table",
-                "button_label": "",
+                "layout": "row",
+                "button_label": "Add New Module",
                 "sub_fields": [
                     {
                         "key": "field_614cd2f42a8d4",
@@ -28,7 +28,7 @@
                         "name": "module_title",
                         "type": "text",
                         "instructions": "",
-                        "required": 0,
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
@@ -43,8 +43,8 @@
                     },
                     {
                         "key": "field_615f4686d9ef6",
-                        "label": "Title Color",
-                        "name": "title_color",
+                        "label": "Module Title Color",
+                        "name": "module_title_color",
                         "type": "color_picker",
                         "instructions": "",
                         "required": 0,
@@ -63,7 +63,7 @@
                         "label": "Module Icon",
                         "name": "module_icon",
                         "type": "image",
-                        "instructions": "",
+                        "instructions": "Choose or upload an icon file that's a square and at least 30px by 30px in size.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -74,19 +74,19 @@
                         "return_format": "url",
                         "preview_size": "medium",
                         "library": "all",
-                        "min_width": "",
-                        "min_height": "",
+                        "min_width": "30px",
+                        "min_height": "30px",
                         "min_size": "",
-                        "max_width": "",
-                        "max_height": "",
+                        "max_width": "1000px",
+                        "max_height": "1000px",
                         "max_size": "",
-                        "mime_types": ""
+                        "mime_types": "png"
                     },
                     {
-                        "key": "field_615f408f96d48",
-                        "label": "Module Background",
-                        "name": "module_background",
-                        "type": "color_picker",
+                        "key": "field_61672eed877ae",
+                        "label": "Use Background Image",
+                        "name": "use_background_image",
+                        "type": "radio",
                         "instructions": "",
                         "required": 0,
                         "conditional_logic": 0,
@@ -95,8 +95,97 @@
                             "class": "",
                             "id": ""
                         },
+                        "choices": {
+                            "true": "Yes",
+                            "false": "No"
+                        },
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "default_value": "",
+                        "layout": "horizontal",
+                        "return_format": "value",
+                        "save_other_choice": 0
+                    },
+                    {
+                        "key": "field_615f408f96d48",
+                        "label": "Module Background Color",
+                        "name": "module_background_color",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_61672eed877ae",
+                                    "operator": "==",
+                                    "value": "false"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
                         "default_value": "#303030",
                         "enable_opacity": 0,
+                        "return_format": "string"
+                    },
+                    {
+                        "key": "field_61672ec9877ad",
+                        "label": "Module Background Image",
+                        "name": "module_background_image",
+                        "type": "image",
+                        "instructions": "Choose or upload an image file that's horizontal and at least 354px wide by 240px tall",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_61672eed877ae",
+                                    "operator": "==",
+                                    "value": "true"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": 354,
+                        "min_height": 240,
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_61672f41877af",
+                        "label": "Background Image Overlay",
+                        "name": "module_background_overlay",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_61672eed877ae",
+                                    "operator": "==",
+                                    "value": "true"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "enable_opacity": 1,
                         "return_format": "string"
                     },
                     {
@@ -124,7 +213,7 @@
                         "name": "module_button_link",
                         "type": "url",
                         "instructions": "Enter the full URL(Including http:\/\/ or https:\/\/ ) you'd like your module to take your users to. i.e. https:\/\/vsg360.com",
-                        "required": 0,
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
@@ -141,7 +230,7 @@
                 "label": "Hub Logo",
                 "name": "header_logo",
                 "type": "image",
-                "instructions": "",
+                "instructions": "Choose or upload a logo file that's horizontal and at least 200px wide",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -152,7 +241,7 @@
                 "return_format": "url",
                 "preview_size": "medium",
                 "library": "all",
-                "min_width": "",
+                "min_width": 200,
                 "min_height": "",
                 "min_size": "",
                 "max_width": "",
@@ -246,6 +335,25 @@
                 ]
             },
             {
+                "key": "field_6166065823171",
+                "label": "Banner Heading",
+                "name": "banner_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_614cc66e2a8d1",
                 "label": "Banner Message",
                 "name": "banner_message",
@@ -269,7 +377,7 @@
                 "label": "Hero Banner Background Image",
                 "name": "hero_banner",
                 "type": "image",
-                "instructions": "",
+                "instructions": "Upload a hero banner image that's horizontal and at least 2545px wide by 400px tall",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -280,10 +388,10 @@
                 "return_format": "url",
                 "preview_size": "medium",
                 "library": "all",
-                "min_width": "",
-                "min_height": "",
+                "min_width": 2545,
+                "min_height": 400,
                 "min_size": "",
-                "max_width": "",
+                "max_width": 3000,
                 "max_height": "",
                 "max_size": "",
                 "mime_types": ""
@@ -295,14 +403,7 @@
                 "type": "color_picker",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_615f408f96d48",
-                            "operator": "!=empty"
-                        }
-                    ]
-                ],
+                "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -311,6 +412,25 @@
                 "default_value": "rgba(0,0,0,.5)",
                 "enable_opacity": 1,
                 "return_format": "string"
+            },
+            {
+                "key": "field_61677ceab6b1f",
+                "label": "Post Feed Title",
+                "name": "post_feed_title",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Announcements",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
                 "key": "field_6160c54034c63",
