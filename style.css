@@ -19,23 +19,33 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 body {
-	margin:0px;
+  margin: 0px;
 }
 img {
-	height: auto;
-	max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 .announcement-post-nav {
-	padding:15px 20px;
+  padding: 15px 20px;
 }
 .announcement-post-wrapper {
-	max-width:800px;
-	margin:0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 #hub-announcement h1 {
-	font-size:32px;
+  font-size: 32px;
 }
-#hub-announcement p, #hub-announcement li {
-	font-size:20px;
-	color:#303030;
+#hub-announcement p,
+#hub-announcement li {
+  font-size: 20px;
+  color: #303030;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/wp-content/uploads/2021/12/Montserrat-BoldItalic.woff2")
+    format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
