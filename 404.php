@@ -16,41 +16,62 @@ get_header();
 			<header class="page-header">
 				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'suitespace-hub' ); ?></h1>
 			</header><!-- .page-header -->
-
+ 
 			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'suitespace-hub' ); ?></p>
 
-					<?php
-					get_search_form();
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'suitespace-hub' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$suitespace_hub_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'suitespace-hub' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$suitespace_hub_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
+    <div class="full-page">
+      <section>
+        <div class="ss-container-logo">
+          <div class="ss-row">
+            <div class="ss-logo-wrapper">
+              <img
+                src="/images/vsg-logo@2x.png"
+                alt="VSG Marketing logo"
+                id="brand-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="ss-container-main">
+          <div class="ss-row">
+            <div class="ss-img-wrapper">
+              <img
+                src="/images/something-went-wrong@2x.png"
+                alt="Text image that says 'something-went-wrong'"
+                id="something-wrong"
+              />
+            </div>
+          </div>
+          <div class="ss-row">
+            <div class="ss-wrapper">
+              <h2 class="ss-heading">
+                We're sorry about that, the page you are looking for couldn't be
+                found.
+              </h2>
+            </div>
+          </div>
+          <div class="ss-row">
+            <div class="ss-btn-wrapper">
+              <a href="https://suitespace.io"
+                ><button class="ss-404-btn">GO BACK TO THE DASHBOARD</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section>
+      <div class="ss-container-background-image">
+        <div class="ss-row">
+          <div class="ss-decor-wrapper">
+            <h2 class="ss-heading"></h2>
+          </div>
+        </div>
+      </div>
+    </section>
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 
