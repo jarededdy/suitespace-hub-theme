@@ -19,19 +19,7 @@ get_header();
 
 
     <div class="full-page">
-      <section>
-        <div class="ss-container-logo">
-          <div class="ss-row">
-            <div class="ss-logo-wrapper">
-              <img
-                src="<?php echo get_template_directory_uri() . '/images/vsg-logo@2x.png' ?>"
-                alt="VSG Marketing logo"
-                id="brand-logo"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      
       <section>
         <div class="ss-container-main">
           <div class="ss-row">
