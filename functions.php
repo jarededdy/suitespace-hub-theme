@@ -155,6 +155,7 @@ function suitespace_hub_scripts() {
 	wp_enqueue_style( 'suitespace-hub-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'suitespace-hub-custom-styles', get_template_directory_uri() . '/css/suitespace-hub-styles.css');
 	wp_enqueue_style( 'fontawesome-styles', get_template_directory_uri() . '/css/fontawesome.min.css');
+	wp_enqueue_style( '404', get_template_directory_uri() . '/css/suitespace-404.css');
 	wp_style_add_data( 'suitespace-hub-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'suitespace-hub-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

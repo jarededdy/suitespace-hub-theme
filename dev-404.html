@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Suitespace.io 404 Page</title>
+    <meta name="description" content="404 page for Suitespace.io" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+      a,
+      button {
+        cursor: pointer !important;
+      }
+
+      .full-page {
+        padding: 75px 125px 0 125px;
+      }
+      .ss-img-wrapper {
+        padding-top: 100px;
+      }
+      #brand-logo {
+        width: 200px;
+      }
+      #something-wrong {
+        width: 85%;
+        height: auto;
+      }
+      .ss-heading {
+        font-family: "Nunito Sans";
+      }
+      h2.ss-heading {
+        font-size: 22px;
+        font-weight: 400;
+      }
+      button.ss-404-btn {
+        background: #1aa1ed;
+        border: 1px solid #1aa1ed;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-family: "Nunito Sans";
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+      .ss-btn-wrapper {
+        padding-top: 50px;
+      }
+      .ss-container-background-image {
+        background-image: url("/images/bg-pattern@2x.png");
+        background-size: cover;
+        min-height: 600px;
+        margin-top: -100px;
+      }
+      /* .ss-decor-wrapper {
+        background-image: url("/images/bg-pattern@2x.png");
+        min-height: 800px;
+        margin-top: -100px;
+      }*/
+      @media (min-width: 768px) and (max-width: 1366px) {
+        .full-page {
+          padding: 75px 30px;
+        }
+        h2.ss-heading {
+          font-size: 18px;
+        }
+        .ss-container-background-image {
+          background-image: url("images/Responsive-Background/Responsive-Background/tablet-bg.png");
+        }
+      }
+      @media (max-width: 767px) {
+        .full-page {
+          padding: 75px 20px;
+        }
+        .ss-img-wrapper {
+          padding-top: 50px;
+        }
+
+        h2.ss-heading {
+          font-size: 15px;
+        }
+        .ss-container-background-image {
+          background-image: url("images/Responsive-Background/Responsive-Background/mobile-bg.png");
+          min-height: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full-page">
+      <section>
+        <div class="ss-container-logo">
+          <div class="ss-row">
+            <div class="ss-logo-wrapper">
+              <img
+                src="/images/vsg-logo@2x.png"
+                alt="VSG Marketing logo"
+                id="brand-logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="ss-container-main">
+          <div class="ss-row">
+            <div class="ss-img-wrapper">
+              <img
+                src="/images/something-went-wrong@2x.png"
+                alt="Text image that says 'something-went-wrong'"
+                id="something-wrong"
+              />
+            </div>
+          </div>
+          <div class="ss-row">
+            <div class="ss-wrapper">
+              <h2 class="ss-heading">
+                We're sorry about that, the page you are looking for couldn't be
+                found.
+              </h2>
+            </div>
+          </div>
+          <div class="ss-row">
+            <div class="ss-btn-wrapper">
+              <a href="https://suitespace.io"
+                ><button class="ss-404-btn">GO BACK TO THE DASHBOARD</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section>
+      <div class="ss-container-background-image">
+        <div class="ss-row">
+          <div class="ss-decor-wrapper">
+            <h2 class="ss-heading"></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
