@@ -3,9 +3,9 @@ a,
 button {
   cursor: pointer !important;
 }
-
-.full-page {
-  padding: 75px 125px 0 125px;
+section.error-404.not-found {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 .ss-img-wrapper {
   padding-top: 100px;
