@@ -13,9 +13,7 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'suitespace-hub' ); ?></h1>
-			</header><!-- .page-header -->
+			
  
 			<div class="page-content">
 
@@ -26,7 +24,7 @@ get_header();
           <div class="ss-row">
             <div class="ss-logo-wrapper">
               <img
-                src="/images/vsg-logo@2x.png"
+                src="<?php echo get_template_directory_uri() . '/images/vsg-logo@2x.png' ?>"
                 alt="VSG Marketing logo"
                 id="brand-logo"
               />
@@ -39,7 +37,7 @@ get_header();
           <div class="ss-row">
             <div class="ss-img-wrapper">
               <img
-                src="/images/something-went-wrong@2x.png"
+                src="<?php echo get_template_directory_uri() . '/images/something-went-wrong@2x.png' ?>"
                 alt="Text image that says 'something-went-wrong'"
                 id="something-wrong"
               />
