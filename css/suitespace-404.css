@@ -3,10 +3,6 @@ a,
 button {
   cursor: pointer !important;
 }
-section.error-404.not-found {
-  max-width: 1140px;
-  margin: 0 auto;
-}
 .full-page {
   max-width: 1140px;
   margin: 0 auto;
