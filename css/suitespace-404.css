@@ -25,12 +25,9 @@ h2.ss-heading {
   font-weight: 400;
 }
 button.ss-404-btn {
-  background: #1aa1ed;
-  border: 1px solid #1aa1ed;
   padding: 10px 20px;
   border-radius: 20px;
   font-family: "Nunito Sans";
-  color: #fff;
   font-size: 12px;
   letter-spacing: 1px;
 }

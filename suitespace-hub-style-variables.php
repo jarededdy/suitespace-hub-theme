@@ -21,12 +21,14 @@ $heroBannerOverlay = get_field('banner_background_overlay', 'options');
 GLOBAL STYLES
 ==== */
 
-a.hub-block-btn {
+a.hub-block-btn,
+button.ss-404-btn {
     background: <?php echo $button_bc; ?>;
     border:1px solid <?php echo $button_bc; ?>;
     color: <?php echo $button_text_color; ?>;
 }
-a.hub-block-btn:hover {
+a.hub-block-btn:hover,
+button.ss-404-btn {
     background: <?php echo $button_text_color; ?>;
     color: <?php echo $button_bc; ?>;
 }
