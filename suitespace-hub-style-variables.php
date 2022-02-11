@@ -28,7 +28,7 @@ button.ss-404-btn {
     color: <?php echo $button_text_color; ?>;
 }
 a.hub-block-btn:hover,
-button.ss-404-btn {
+button.ss-404-btn:hover {
     background: <?php echo $button_text_color; ?>;
     color: <?php echo $button_bc; ?>;
 }
